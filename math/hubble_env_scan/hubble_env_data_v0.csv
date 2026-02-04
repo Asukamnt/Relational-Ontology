@@ -1,0 +1,17 @@
+env_id,env_name,category,data_kind,use_for_fit,is_global_anchor,delta,delta_err,H0,H0_err,redshift_range,scale_mpc,source,notes
+cmb_global,Planck CMB (global),global,observed,true,true,0,,67.36,0.54,z~1100,global,Planck 2018,Global anchor
+kbc_void_tf,KBC void (Tully-Fisher),void,observed,true,false,-0.46,0.06,72.1,0.9,local,40-300,Stiskalek et al. 2025 (arXiv:2506.10518),"Predicted local H0 for exponential void profile; quoted as 72.1^{+0.9}_{-0.8} km/s/Mpc; using symmetric H0_err≈0.9 for v0"
+sh0es_local,Local SN (SH0ES),void,observed,true,false,-0.46,0.06,73.17,0.86,local,40-300,Riess et al. 2022,Assumes local SN sample sits in KBC void
+cold_spot_min,Cold Spot (min),void,forecast,false,false,-0.7,,73.5,,local,,Prediction from beta=0.15,Forecast point (min delta)
+cold_spot_max,Cold Spot (max),void,forecast,false,false,-0.6,,74.4,,local,,Prediction from beta=0.15,Forecast point (max delta)
+cluster_min,Typical cluster (min),cluster,forecast,false,false,0.3,,65.4,,local,,Prediction from beta=0.15,Forecast point (min delta)
+cluster_max,Typical cluster (max),cluster,forecast,false,false,0.5,,64.4,,local,,Prediction from beta=0.15,Forecast point (max delta)
+coma_min,Coma (min),cluster,forecast,false,false,1.0,,57.3,,local,,Prediction from beta=0.15,Forecast point (min delta)
+coma_max,Coma (max),cluster,forecast,false,false,2.0,,47.2,,local,,Prediction from beta=0.15,Forecast point (max delta)
+kbc_void_model,KBC void model (delta=-0.3),void,inferred,false,false,-0.3,,71.06,,local,308,Kenworthy 2019 (arXiv:1901.08681),Model-implied local H0 shift +5.5% for KBC parameters
+shanks_void_model,Shanks 2019 void (delta=-0.2),void,inferred,false,false,-0.2,,69.72,,local,~0.05z,Kenworthy 2019 (arXiv:1901.08681),Model-implied H0 shift +3.5% for delta=-0.2 void
+cf4_void_exp,Local supervoid CF4 (exponential),void,inferred,false,false,-0.46,0.06,72.08,,local,<70,Stiskalek et al. 2025 (arXiv:2506.10518),Predicted H0_local for exponential void profile
+cf4_void_gauss,Local supervoid CF4 (gaussian),void,inferred,false,false,-0.46,0.06,70.40,,local,<70,Stiskalek et al. 2025 (arXiv:2506.10518),Predicted H0_local for gaussian void profile
+cf4_void_mb,Local supervoid CF4 (maxwell),void,inferred,false,false,-0.46,0.06,70.18,,local,<70,Stiskalek et al. 2025 (arXiv:2506.10518),Predicted H0_local for maxwell-boltzmann void profile
+coma_cz_over_D,Coma cluster (cz/D from distance ladder),cluster,observed,false,false,,,74.42,1.82,z~0.024,~100,Scolnic et al. 2025 ApJL 979 L9,"Computed H0=cz/D from D_Coma=98.5±2.2 Mpc and z_CMB=0.02445±0.00024"
+coma_desi_fp,Coma cluster (DESI FP calibrated by Coma distance),cluster,observed,false,false,,,76.5,2.2,z~0.023-0.1,Coma,Scolnic et al. 2025 ApJL 979 L9,"DESI FP relation yields H0=76.5±2.2 km/s/Mpc when anchored by D_Coma=98.5±2.2 Mpc"

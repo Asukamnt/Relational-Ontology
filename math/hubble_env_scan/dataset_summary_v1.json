@@ -1,0 +1,96 @@
+{
+  "data_file": "math\\hubble_env_scan\\hubble_env_data_v1.csv",
+  "schema": {
+    "required_columns": [
+      "env_id",
+      "env_name",
+      "category",
+      "data_kind",
+      "use_for_fit",
+      "is_global_anchor",
+      "delta",
+      "delta_err",
+      "H0",
+      "H0_err",
+      "redshift_range",
+      "scale_mpc",
+      "source",
+      "notes"
+    ],
+    "optional_columns": [
+      "delta_kind",
+      "delta_scale_mpc_h",
+      "delta_source"
+    ],
+    "present_columns": [
+      "env_id",
+      "env_name",
+      "category",
+      "data_kind",
+      "use_for_fit",
+      "is_global_anchor",
+      "delta",
+      "delta_err",
+      "H0",
+      "H0_err",
+      "redshift_range",
+      "scale_mpc",
+      "source",
+      "notes",
+      "delta_kind",
+      "delta_scale_mpc_h",
+      "delta_source"
+    ],
+    "missing_columns": [],
+    "missing_optional_columns": [],
+    "extra_columns": []
+  },
+  "counts": {
+    "n_rows_total": 24,
+    "n_observed": 9,
+    "n_forecast": 6,
+    "n_inferred": 9,
+    "n_fit_points": 3
+  },
+  "env_id": {
+    "n_unique": 24,
+    "duplicates": []
+  },
+  "anchors": {
+    "n_anchors": 1,
+    "anchor_ids": [
+      "cmb_global"
+    ]
+  },
+  "fit_identifiability": {
+    "unique_deltas": [
+      -0.46,
+      0.0
+    ],
+    "n_unique_deltas": 2,
+    "ok_for_two_param_fit": true,
+    "note": "Need >=2 distinct delta values to identify (H0_global, beta) in H0=a-b*delta."
+  },
+  "categories_observed": {
+    "global": 1,
+    "void": 2,
+    "cluster": 6
+  },
+  "missing_errors_in_fit_points": {
+    "delta_err_missing": [
+      "cmb_global"
+    ],
+    "H0_err_missing": []
+  },
+  "delta_kind_counts": {
+    "direct": 14,
+    "delta_g_star_2mpp": 4,
+    "gavas_delta_den_10mpch": 4
+  },
+  "proxy_scales_mpc_h": [
+    10.0,
+    20.0,
+    50.0,
+    100.0
+  ]
+}

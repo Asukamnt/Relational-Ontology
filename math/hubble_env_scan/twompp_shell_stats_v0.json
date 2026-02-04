@@ -1,0 +1,19 @@
+{
+  "rmin_mpc_h": 27.0,
+  "rmax_mpc_h": 200.0,
+  "smoothing_gaussian_mpc_h": 4.0,
+  "delta_g_star_mean": 0.005575118431760446,
+  "delta_g_star_std": 0.7006891768845457,
+  "n_cells": 8761148,
+  "origin_delta_g_star": 0.2918596514282739,
+  "grid": {
+    "N": 257,
+    "spacing_mpc_h": 1.5625,
+    "extent_mpc_h": 200.0
+  },
+  "notes": [
+    "delta_g* is luminosity-weighted galaxy density contrast from 2M++ (Carrick et al. 2015).",
+    "Shell mean is a simple volume average over grid cells whose centers fall in [rmin,rmax).",
+    "This is not directly delta_m unless a bias model is assumed."
+  ]
+}

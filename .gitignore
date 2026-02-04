@@ -1,0 +1,53 @@
+# Python bytecode / caches
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Python tooling caches
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# OS / editor noise
+Thumbs.db
+.DS_Store
+
+# Project notes
+docs/对话/
+
+# Large downloaded datasets / caches
+math/hubble_env_scan/_cache/
+
+# Generic caches / downloads
+**/_cache/
+*.npy
+*.npz
+
+# arXiv build artifacts
+papers/_arxiv_dimension_emergence/
+papers/_arxiv_*/
+
+# Demo terminal renders
+*demo_terminal*.png
+
+# Temporary experiment files
+_tmp_*.json
+_tmp_*.png
+_temp_*.py
+
+# LaTeX build artifacts
+*.aux
+*.bbl
+*.blg
+*.log
+*.out
+*.synctex.gz
+
+# Cursor IDE
+.cursor/
+
+# Agent tools output
+agent-tools/

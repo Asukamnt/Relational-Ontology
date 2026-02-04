@@ -1,0 +1,106 @@
+{
+  "gavas_reported": {
+    "source": "Gavas et al. 2024 (arXiv:2407.10139)",
+    "section": "IV.3 Correlation with local density",
+    "notes": [
+      "delta_den: local overdensity within 10 Mpc/h of observer",
+      "delta_H: measured in shells 25-40 Mpc/h",
+      "Correlation: moderate negative (delta_H decreases with delta_den)"
+    ],
+    "boxes": {
+      "150 Mpc/h": {
+        "pearson_r_all": -0.27,
+        "spearman_r_all": -0.28,
+        "pearson_r_mwh": -0.35,
+        "spearman_r_mwh": -0.34,
+        "sigma_deltaH_at_100mpc": 0.04,
+        "notes": "Smallest box, highest resolution"
+      },
+      "500 Mpc/h": {
+        "pearson_r_all": -0.3,
+        "spearman_r_all": -0.31,
+        "pearson_r_mwh": -0.33,
+        "spearman_r_mwh": -0.33,
+        "sigma_deltaH_at_100mpc": 0.04,
+        "notes": "Medium box"
+      },
+      "1000 Mpc/h": {
+        "pearson_r_all": -0.28,
+        "spearman_r_all": -0.29,
+        "pearson_r_mwh": -0.3,
+        "spearman_r_mwh": -0.3,
+        "sigma_deltaH_at_100mpc": 0.03,
+        "notes": "Largest box, lowest resolution"
+      }
+    },
+    "table2_mw_halos": {
+      "shell_20_200": {
+        "1sigma": [
+          -0.045,
+          0.037
+        ],
+        "2sigma": [
+          -0.042,
+          0.034
+        ],
+        "3sigma": [
+          -0.042,
+          0.034
+        ]
+      },
+      "shell_40_200": {
+        "1sigma": [
+          -0.044,
+          0.037
+        ],
+        "2sigma": [
+          -0.042,
+          0.034
+        ],
+        "3sigma": [
+          -0.042,
+          0.034
+        ]
+      },
+      "shell_80_200": {
+        "1sigma": [
+          -0.042,
+          0.038
+        ],
+        "2sigma": [
+          -0.04,
+          0.033
+        ],
+        "3sigma": [
+          -0.04,
+          0.033
+        ]
+      },
+      "shell_120_200": {
+        "1sigma": [
+          -0.046,
+          0.036
+        ],
+        "2sigma": [
+          -0.039,
+          0.034
+        ],
+        "3sigma": [
+          -0.037,
+          0.032
+        ]
+      }
+    }
+  },
+  "our_model": {
+    "H0_global": 67.4,
+    "beta_fit": 0.183,
+    "beta_linear_theory": 0.177,
+    "notes": "Fitted from KBC void (delta ~ -0.46, H0_local ~ 73.0)"
+  },
+  "validation_summary": {
+    "direction": "consistent (negative correlation)",
+    "magnitude": "approximately consistent (beta ~ 0.1-0.2)",
+    "notes": "Quantitative beta requires scatter plot extraction"
+  }
+}

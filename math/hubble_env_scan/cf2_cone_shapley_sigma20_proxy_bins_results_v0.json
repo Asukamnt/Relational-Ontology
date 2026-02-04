@@ -1,0 +1,117 @@
+{
+  "metadata": {
+    "timestamp": "2026-02-02T20:26:57.473081",
+    "script": "run_cf2_cone_proxy_bins_v0.py"
+  },
+  "config": {
+    "cone": {
+      "name": "shapley",
+      "l_deg": 311.531118363705,
+      "b_deg": 32.31073097097159,
+      "radius_deg": 35.0
+    },
+    "smooth_mpc_h": 20.0,
+    "table": "table1",
+    "velocity_mode": "raw",
+    "r_from": "dist",
+    "h_ref": 0.6736,
+    "dist_min_mpc": 80.0,
+    "dist_max_mpc": 250.0,
+    "vmin_kms": 8000.0,
+    "vmax_kms": 20000.0,
+    "err_max": 0.25,
+    "peculiar_vel_err_kms": 250.0,
+    "n_bins": 5,
+    "min_per_bin": 40
+  },
+  "counts": {
+    "n_cf2_rows": 8315,
+    "n_selected": 226,
+    "n_used_in_bins": 226,
+    "n_bins_output": 5
+  },
+  "bin_edges": [
+    -0.15497840168891386,
+    0.18383451013975158,
+    0.3707960223843413,
+    0.4419461065204641,
+    0.6482649841263688,
+    1.1736138503407392
+  ],
+  "bins": [
+    {
+      "bin_index": 1,
+      "lo": -0.15497840168891386,
+      "hi": 0.18383451013975158,
+      "n": 45,
+      "delta_mean": 0.0468159629860347,
+      "H0_mean": 71.3420318053241,
+      "H0_se": 1.8845754544525175
+    },
+    {
+      "bin_index": 2,
+      "lo": 0.18383451013975158,
+      "hi": 0.3707960223843413,
+      "n": 45,
+      "delta_mean": 0.2889950199880203,
+      "H0_mean": 76.63404433514515,
+      "H0_se": 2.1961675453803977
+    },
+    {
+      "bin_index": 3,
+      "lo": 0.3707960223843413,
+      "hi": 0.4419461065204641,
+      "n": 44,
+      "delta_mean": 0.4053343620546878,
+      "H0_mean": 82.27605003644938,
+      "H0_se": 2.297266764144561
+    },
+    {
+      "bin_index": 4,
+      "lo": 0.4419461065204641,
+      "hi": 0.6482649841263688,
+      "n": 45,
+      "delta_mean": 0.5329910259291021,
+      "H0_mean": 79.7723647807792,
+      "H0_se": 2.582795578141936
+    },
+    {
+      "bin_index": 5,
+      "lo": 0.6482649841263688,
+      "hi": 1.1736138503407392,
+      "n": 47,
+      "delta_mean": 0.9614189046292907,
+      "H0_mean": 71.59961073701047,
+      "H0_se": 2.151424883425041
+    }
+  ],
+  "fit_bins": {
+    "H0_global_like_a": 75.62619974852156,
+    "b": -0.03282757817603323,
+    "beta_like": -0.0004340767919741332,
+    "chi2": 19.837102910729687,
+    "chi2_dof": 6.612367636909895,
+    "corr_delta_H0": -0.06635344912190026,
+    "cov_ab": [
+      [
+        17.072097259269395,
+        25.637049207013654
+      ],
+      [
+        25.637049207013646,
+        61.194755248038476
+      ]
+    ],
+    "n_points": 5
+  },
+  "outputs": {
+    "bins_csv": "D:\\Relational-Ontology\\math\\hubble_env_scan\\hubble_env_cf2_cone_shapley_sigma20_proxy_bins_v0.csv",
+    "merged_csv": "D:\\Relational-Ontology\\math\\hubble_env_scan\\hubble_env_data_v1_cf2_cone_shapley_sigma20_proxy_v0.csv",
+    "json": "D:\\Relational-Ontology\\math\\hubble_env_scan\\cf2_cone_shapley_sigma20_proxy_bins_results_v0.json",
+    "plot": "D:\\Relational-Ontology\\math\\hubble_env_scan\\cf2_cone_shapley_sigma20_proxy_bins_plot_v0.png"
+  },
+  "notes": [
+    "This proxy track is exploratory and not equivalent to observer-environment bias.",
+    "If beta_like is negative here, it usually indicates residual flow/systematic effects dominating H0=V/Dist."
+  ]
+}

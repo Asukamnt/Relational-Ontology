@@ -1,0 +1,268 @@
+{
+  "metadata": {
+    "timestamp": "2026-02-02T18:53:33.732656",
+    "script": "analyze_twompp_shell_stats_v0.py",
+    "input": "D:\\Relational-Ontology\\math\\hubble_env_scan\\twompp_shell_stats_grid_v0.csv"
+  },
+  "selected_shells": [
+    "shell_0_67",
+    "shell_30_67",
+    "shell_0_75",
+    "shell_30_75",
+    "shell_0_150",
+    "shell_40_150",
+    "shell_40_200"
+  ],
+  "shells": {
+    "shell_0_67": {
+      "rmin_mpc_h": 0.0,
+      "rmax_mpc_h": 67.0,
+      "notes": "Match Odderskov+2015 rmax=67 (sphere; includes origin)",
+      "rows": [
+        {
+          "smoothing_gaussian_mpc_h": 4.0,
+          "delta_g_star_mean": 0.0905181766977154,
+          "delta_g_star_std": 1.0722751106845647,
+          "n_cells": 330373,
+          "origin_delta_g_star": 0.2918596514282739
+        },
+        {
+          "smoothing_gaussian_mpc_h": 20.0,
+          "delta_g_star_mean": 0.07958073424863726,
+          "delta_g_star_std": 0.19565902505346305,
+          "n_cells": 330373,
+          "origin_delta_g_star": 0.1197564886869981
+        },
+        {
+          "smoothing_gaussian_mpc_h": 50.0,
+          "delta_g_star_mean": 0.04350769888593727,
+          "delta_g_star_std": 0.02909305949451228,
+          "n_cells": 330373,
+          "origin_delta_g_star": 0.055913171811285516
+        },
+        {
+          "smoothing_gaussian_mpc_h": 100.0,
+          "delta_g_star_mean": 0.012533664004114372,
+          "delta_g_star_std": 0.0035035746250676398,
+          "n_cells": 330373,
+          "origin_delta_g_star": 0.014093954048896871
+        }
+      ]
+    },
+    "shell_30_67": {
+      "rmin_mpc_h": 30.0,
+      "rmax_mpc_h": 67.0,
+      "notes": "Match Odderskov+2015 style lower cut rmin=30, rmax=67",
+      "rows": [
+        {
+          "smoothing_gaussian_mpc_h": 4.0,
+          "delta_g_star_mean": 0.08530150104621036,
+          "delta_g_star_std": 1.0706265255577425,
+          "n_cells": 300950,
+          "origin_delta_g_star": 0.2918596514282739
+        },
+        {
+          "smoothing_gaussian_mpc_h": 20.0,
+          "delta_g_star_mean": 0.07733642810035106,
+          "delta_g_star_std": 0.19949899310754085,
+          "n_cells": 300950,
+          "origin_delta_g_star": 0.1197564886869981
+        },
+        {
+          "smoothing_gaussian_mpc_h": 50.0,
+          "delta_g_star_mean": 0.04256561171472236,
+          "delta_g_star_std": 0.030021437448961963,
+          "n_cells": 300950,
+          "origin_delta_g_star": 0.055913171811285516
+        },
+        {
+          "smoothing_gaussian_mpc_h": 100.0,
+          "delta_g_star_mean": 0.01241311845107438,
+          "delta_g_star_std": 0.0036115195435833395,
+          "n_cells": 300950,
+          "origin_delta_g_star": 0.014093954048896871
+        }
+      ]
+    },
+    "shell_0_75": {
+      "rmin_mpc_h": 0.0,
+      "rmax_mpc_h": 75.0,
+      "notes": "Match Wojtak+2014 rmax=75 (sphere; includes origin)",
+      "rows": [
+        {
+          "smoothing_gaussian_mpc_h": 4.0,
+          "delta_g_star_mean": 0.07208741404971684,
+          "delta_g_star_std": 1.024153979389056,
+          "n_cells": 462751,
+          "origin_delta_g_star": 0.2918596514282739
+        },
+        {
+          "smoothing_gaussian_mpc_h": 20.0,
+          "delta_g_star_mean": 0.07362127880502468,
+          "delta_g_star_std": 0.1904091383756036,
+          "n_cells": 462751,
+          "origin_delta_g_star": 0.1197564886869981
+        },
+        {
+          "smoothing_gaussian_mpc_h": 50.0,
+          "delta_g_star_mean": 0.040917515355052045,
+          "delta_g_star_std": 0.031668602360212926,
+          "n_cells": 462751,
+          "origin_delta_g_star": 0.055913171811285516
+        },
+        {
+          "smoothing_gaussian_mpc_h": 100.0,
+          "delta_g_star_mean": 0.012171197360881882,
+          "delta_g_star_std": 0.0038483014217587314,
+          "n_cells": 462751,
+          "origin_delta_g_star": 0.014093954048896871
+        }
+      ]
+    },
+    "shell_30_75": {
+      "rmin_mpc_h": 30.0,
+      "rmax_mpc_h": 75.0,
+      "notes": "Match Wojtak+2014 rmax=75 with a conservative lower cut rmin=30",
+      "rows": [
+        {
+          "smoothing_gaussian_mpc_h": 4.0,
+          "delta_g_star_mean": 0.06721293820990841,
+          "delta_g_star_std": 1.019522651776192,
+          "n_cells": 433328,
+          "origin_delta_g_star": 0.2918596514282739
+        },
+        {
+          "smoothing_gaussian_mpc_h": 20.0,
+          "delta_g_star_mean": 0.07165794158046467,
+          "delta_g_star_std": 0.19274469254407622,
+          "n_cells": 433328,
+          "origin_delta_g_star": 0.1197564886869981
+        },
+        {
+          "smoothing_gaussian_mpc_h": 50.0,
+          "delta_g_star_mean": 0.0400873541279761,
+          "delta_g_star_std": 0.03236855916902319,
+          "n_cells": 433328,
+          "origin_delta_g_star": 0.055913171811285516
+        },
+        {
+          "smoothing_gaussian_mpc_h": 100.0,
+          "delta_g_star_mean": 0.012062865934730757,
+          "delta_g_star_std": 0.003929842527302195,
+          "n_cells": 433328,
+          "origin_delta_g_star": 0.014093954048896871
+        }
+      ]
+    },
+    "shell_0_150": {
+      "rmin_mpc_h": 0.0,
+      "rmax_mpc_h": 150.0,
+      "notes": "Match common rmax=150 (sphere; includes origin)",
+      "rows": [
+        {
+          "smoothing_gaussian_mpc_h": 4.0,
+          "delta_g_star_mean": 0.015126792703320234,
+          "delta_g_star_std": 0.80192188079545,
+          "n_cells": 3705063,
+          "origin_delta_g_star": 0.2918596514282739
+        },
+        {
+          "smoothing_gaussian_mpc_h": 20.0,
+          "delta_g_star_mean": 0.020426418842031464,
+          "delta_g_star_std": 0.17797617491125778,
+          "n_cells": 3705063,
+          "origin_delta_g_star": 0.1197564886869981
+        },
+        {
+          "smoothing_gaussian_mpc_h": 50.0,
+          "delta_g_star_mean": 0.018155296719701564,
+          "delta_g_star_std": 0.038135210294483704,
+          "n_cells": 3705063,
+          "origin_delta_g_star": 0.055913171811285516
+        },
+        {
+          "smoothing_gaussian_mpc_h": 100.0,
+          "delta_g_star_mean": 0.007964403611588807,
+          "delta_g_star_std": 0.005832288467189429,
+          "n_cells": 3705063,
+          "origin_delta_g_star": 0.014093954048896871
+        }
+      ]
+    },
+    "shell_40_150": {
+      "rmin_mpc_h": 40.0,
+      "rmax_mpc_h": 150.0,
+      "notes": "KBC-like lower cut (rough); rmax=150",
+      "rows": [
+        {
+          "smoothing_gaussian_mpc_h": 4.0,
+          "delta_g_star_mean": 0.0147048090366981,
+          "delta_g_star_std": 0.7961271044784013,
+          "n_cells": 3634744,
+          "origin_delta_g_star": 0.2918596514282739
+        },
+        {
+          "smoothing_gaussian_mpc_h": 20.0,
+          "delta_g_star_mean": 0.01896073366316294,
+          "delta_g_star_std": 0.17765073602598533,
+          "n_cells": 3634744,
+          "origin_delta_g_star": 0.1197564886869981
+        },
+        {
+          "smoothing_gaussian_mpc_h": 50.0,
+          "delta_g_star_mean": 0.0175184893377926,
+          "delta_g_star_std": 0.03814082384111417,
+          "n_cells": 3634744,
+          "origin_delta_g_star": 0.055913171811285516
+        },
+        {
+          "smoothing_gaussian_mpc_h": 100.0,
+          "delta_g_star_mean": 0.007857025655602647,
+          "delta_g_star_std": 0.005828651653135513,
+          "n_cells": 3634744,
+          "origin_delta_g_star": 0.014093954048896871
+        }
+      ]
+    },
+    "shell_40_200": {
+      "rmin_mpc_h": 40.0,
+      "rmax_mpc_h": 200.0,
+      "notes": "KBC-like lower cut (rough); bounded by 2M++ extent",
+      "rows": [
+        {
+          "smoothing_gaussian_mpc_h": 4.0,
+          "delta_g_star_mean": 0.005768976787168196,
+          "delta_g_star_std": 0.6983592357089738,
+          "n_cells": 8712460,
+          "origin_delta_g_star": 0.2918596514282739
+        },
+        {
+          "smoothing_gaussian_mpc_h": 20.0,
+          "delta_g_star_mean": 0.009896513494323533,
+          "delta_g_star_std": 0.14725334091187808,
+          "n_cells": 8712460,
+          "origin_delta_g_star": 0.1197564886869981
+        },
+        {
+          "smoothing_gaussian_mpc_h": 50.0,
+          "delta_g_star_mean": 0.008298240345150254,
+          "delta_g_star_std": 0.03330038045613676,
+          "n_cells": 8712460,
+          "origin_delta_g_star": 0.055913171811285516
+        },
+        {
+          "smoothing_gaussian_mpc_h": 100.0,
+          "delta_g_star_mean": 0.005291254805110248,
+          "delta_g_star_std": 0.005896251641838598,
+          "n_cells": 8712460,
+          "origin_delta_g_star": 0.014093954048896871
+        }
+      ]
+    }
+  },
+  "outputs": {
+    "plot": "D:\\Relational-Ontology\\math\\hubble_env_scan\\twompp_shell_stats_plot_v0.png",
+    "json": "D:\\Relational-Ontology\\math\\hubble_env_scan\\twompp_shell_stats_summary_v0.json"
+  },
+  "note": "delta_g* is luminosity-weighted galaxy density contrast from 2M++ (Carrick+2015)."
+}

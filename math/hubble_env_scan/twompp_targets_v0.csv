@@ -1,0 +1,5 @@
+target_id,target_name,coord_system,ra_deg,dec_deg,l_deg,b_deg,r_mpc_h,reference,notes
+local_group,Local Group (origin),galactic,,,0,0,0,2M++ grid definition,"Origin of the 2M++ cube (cell [128,128,128])"
+coma,Coma cluster (Abell 1656),equatorial,194.953,27.9806,,,73.3,NED/Wikipedia,"Approx center RA=12h59m48.7s Dec=+27°58'50\"; r≈cz/100 with z_CMB≈0.02445"
+great_attractor,Great Attractor (Norma/GA region),galactic,,,325,-7,48.4,ADS summaries,"Direction l≈325 b≈-7; r≈4844/100 Mpc/h (order-of-mag)"
+shapley,Shapley supercluster (concentration),equatorial,201.25,-30.0,,,138.0,Wikipedia/Quintana et al.,"Approx center RA≈13h25m Dec≈-30°; z≈0.046 -> cz≈13800 km/s -> r≈138 Mpc/h"

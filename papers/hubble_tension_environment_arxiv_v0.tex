@@ -1,0 +1,199 @@
+% arXiv-ready LaTeX draft: Hubble tension environment correction (v0).
+%
+% Build tip (from repo root):
+%   python papers/build_arxiv_hubble_tension_environment.py
+%
+% The build script copies needed figures into papers/_arxiv_hubble_tension_environment/fig/
+% and creates a ZIP file suitable for arXiv upload.
+
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{microtype}
+
+\hypersetup{
+  colorlinks=true,
+  linkcolor=blue,
+  citecolor=blue,
+  urlcolor=blue
+}
+
+\graphicspath{{fig/}}
+
+\title{Environmental Correction to the Hubble Tension:\\A Reproducible, Falsifiable v0 Model}
+\author{Baiyi Wang\\Independent Researcher}
+\date{2026-01-31}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+The Hubble tension refers to the persistent discrepancy between early-universe (CMB) and late-universe
+(distance-ladder / SNe) measurements of the Hubble constant $H_0$.
+This note proposes a minimal, testable ``observer-environment effect'' model:
+the locally inferred $H_0$ depends systematically on the large-scale density contrast $\delta$
+around the observer. In a linear parameterization,
+\[
+H_0(\delta)=H_{0,\mathrm{ref}}\,(1-\beta\,\delta),
+\]
+where $H_{0,\mathrm{ref}}$ is a reference expansion rate (conventionally anchored to the CMB/Planck value; i.e., a normalization choice) and $\beta>0$
+is a density--expansion coupling coefficient. The model predicts higher local $H_0$ in underdense
+regions and lower local $H_0$ in overdense regions.
+We provide a fully reproducible v0/v1 pipeline (CSV dataset, fitting scripts, JSON outputs, and figures)
+and explicit falsification criteria. The present evidence is limited (small point set, heterogeneous
+definitions of $\delta$), so this note is intentionally narrow in scope:
+freeze a simple hypothesis in a reproducible, falsifiable form so that future data can decisively
+support, refine, or refute it.
+\end{abstract}
+
+\section{Problem statement}
+
+Representative values (for context):
+\begin{itemize}
+  \item Planck 2018 (CMB): $H_0 \approx 67.4\ \mathrm{km\,s^{-1}\,Mpc^{-1}}$
+  \item SH0ES (distance ladder): $H_0 \approx 73.2\ \mathrm{km\,s^{-1}\,Mpc^{-1}}$
+\end{itemize}
+The relative difference is $\sim 9\%$, at multi-$\sigma$ significance.
+
+This note does not claim a definitive solution. Its objectives are:
+\begin{itemize}
+  \item state a \textbf{minimal testable parameterization};
+  \item provide a \textbf{reproducible pipeline};
+  \item define \textbf{clear falsification criteria}.
+\end{itemize}
+
+\section{Model}
+
+\subsection{Definitions}
+\begin{itemize}
+  \item $H_{0,\mathrm{ref}}$: reference expansion rate (conventionally anchored to CMB/Planck; normalization choice)
+  \item $\delta$: (observer) density contrast relative to the mean,
+        $\delta=(\rho-\bar\rho)/\bar\rho$ (definition depends on the source; see below)
+  \item $\beta$: density--expansion coupling coefficient
+\end{itemize}
+
+\subsection{Main equation}
+\[
+H_0(\delta)=H_{0,\mathrm{ref}}\,(1-\beta\,\delta).
+\]
+Interpretation:
+\begin{itemize}
+  \item $\delta<0$ (underdense) $\Rightarrow H_0(\delta) > H_{0,\mathrm{ref}}$
+  \item $\delta>0$ (overdense) $\Rightarrow H_0(\delta) < H_{0,\mathrm{ref}}$
+\end{itemize}
+
+\subsection{Linear-theory baseline (comparison)}
+In standard linear theory one often obtains $\delta H/H \sim -(f/3)\delta$,
+with $f\simeq \Omega_m^{0.55}$. For Planck-like parameters $\Omega_m\approx 0.315$,
+\[
+\beta_{\mathrm{lin}}\approx \frac{f}{3}\approx 0.177.
+\]
+
+\subsection{A toy operational chain (Poisson + flow)}
+This repository also contains a minimal toy chain (not a full cosmological normalization) to
+demonstrate the sign and near-linearity:
+\begin{enumerate}
+  \item Use a 3D torus graph where the graph Laplacian $L\approx -\nabla^2$ in the continuum limit.
+  \item Define a compensated contrast field $\delta_{\mathrm{rel}}$ and solve a Poisson response $L\phi=-\delta_{\mathrm{rel}}$.
+  \item Define an entropic/potential-gradient flow proxy $\mathbf v=-f\nabla\phi$.
+  \item Estimate the regression bias using a shell/window estimator, yielding $\beta\approx f/3$.
+\end{enumerate}
+Script: \path{math/spectral_graph/run_relational_hubble_beta_poisson_3d_v0.py}.
+
+\section{Data and \texorpdfstring{$\delta$}{delta} conventions (v0/v1)}
+\label{sec:delta_conventions}
+
+The dominant practical limitation in v0 is that $\delta$ values are taken from heterogeneous sources
+(different smoothing scales, definitions, and bias corrections). The pipeline therefore:
+\begin{itemize}
+  \item records the data source and notes;
+  \item keeps ``fit points'' and ``forecast points'' separated;
+  \item treats $\delta$-definition unification as a v1/v2 priority.
+\end{itemize}
+Dataset: \path{math/hubble_env_scan/hubble_env_data_v1.csv}. Pipeline notes: \path{math/hubble_env_scan/README.md}.
+
+\section{Reproducible results (current outputs)}
+
+Running
+\begin{quote}
+\path{python math/hubble_env_scan/run_hubble_env_scan_v1.py}
+\end{quote}
+produces \path{math/hubble_env_scan/results_v1.json} and \path{math/hubble_env_scan/plot_v1.png}.
+
+The current direct-fit (n=3; see JSON for details):
+\begin{itemize}
+  \item $H_{0,\mathrm{ref}}=67.36$ (Planck/CMB anchor; convention)
+  \item $\beta \approx 0.171 \pm 0.024$
+  \item MC (16/50/84): $0.139 / 0.169 / 0.201$
+\end{itemize}
+
+\begin{figure}[t]
+  \centering
+  \includegraphics[width=\linewidth]{hubble_env_scan_plot_v1.png}
+  \caption{Environment scan (v1): $H_0$ vs density contrast $\delta$ with MC uncertainty band.}
+  \label{fig:hubble_env_scan_v1}
+\end{figure}
+
+The toy operational chain can be reproduced by running
+\begin{quote}
+\path{python math/spectral_graph/run_relational_hubble_beta_poisson_3d_v0.py}
+\end{quote}
+which outputs \path{math/spectral_graph/relational_hubble_beta_poisson_3d_plot_v0.png}.
+
+\begin{figure}[t]
+  \centering
+  \includegraphics[width=\linewidth]{relational_hubble_beta_poisson_3d_plot_v0.png}
+  \caption{Toy chain (3D torus): Poisson response + flow proxy yields near-linear $\delta H/H$ vs $\delta$ with an effective $\beta$.}
+  \label{fig:toy_poisson_flow}
+\end{figure}
+
+\section{Frozen forecast points (v1)}
+
+Using the current fitted $\beta\approx 0.171$ (direct convention), the pipeline freezes example forecast values:
+\begin{center}
+\begin{tabular}{@{}lll@{}}
+\toprule
+Environment (example) & $\delta$ & predicted $H_0$ (km/s/Mpc) \\
+\midrule
+Cold Spot-like underdensity & $-0.7$ & $\sim 75.4$ \\
+Cold Spot-like underdensity & $-0.6$ & $\sim 74.3$ \\
+Typical cluster & $+0.3$ & $\sim 63.9$ \\
+Typical cluster & $+0.5$ & $\sim 61.6$ \\
+Coma-like overdensity (lower) & $+1.0$ & $\sim 55.8$ \\
+Coma-like overdensity (upper) & $+2.0$ & $\sim 44.3$ \\
+\bottomrule
+\end{tabular}
+\end{center}
+See the JSON output for MC intervals at each point.
+
+\section{Falsification criteria (v0 convention)}
+
+Any of the following outcomes requires revising or abandoning the model:
+\begin{itemize}
+  \item Multi-environment fits yield $\beta \le 0$ with significance $\ge 2\sigma$.
+  \item In overdense environments ($\delta>0$), measured local $H_0$ is systematically above $H_{0,\mathrm{ref}}$
+        at $\ge 2\sigma$ after controlling for systematics.
+  \item Residuals are strongly nonlinear and cannot be absorbed by a first-order correction (requiring scale-dependent or nonlinear upgrades; if still failing, the path is falsified).
+\end{itemize}
+
+\section{Reproducibility (minimal)}
+
+From the repository root:
+\begin{quote}
+\path{pip install -r requirements.txt}\\
+\path{python math/hubble_env_scan/run_hubble_env_scan_v1.py}\\
+\path{python math/spectral_graph/run_relational_hubble_beta_poisson_3d_v0.py}
+\end{quote}
+
+\paragraph{Repository pointers.}
+Model note (Chinese): \path{papers/hubble_tension_environment_v0.md}.
+English draft: \path{papers/hubble_tension_environment_v0_en.md}.
+Mechanism and evidence chain: \path{docs/physics/hubble_tension.md}.
+Prediction list: \path{docs/verification/predictions.md}.
+
+\end{document}
+

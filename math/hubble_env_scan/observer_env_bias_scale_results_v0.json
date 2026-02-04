@@ -1,0 +1,173 @@
+{
+  "metadata": {
+    "timestamp": "2026-02-02T18:42:39.719096",
+    "script": "analyze_observer_env_bias_scale_v0.py",
+    "wojtak_csv": "D:\\Relational-Ontology\\math\\hubble_env_scan\\observer_env_bias_wojtak2014_table1.csv",
+    "odderskov_csv": "D:\\Relational-Ontology\\math\\hubble_env_scan\\observer_env_bias_odderskov2015_table2.csv"
+  },
+  "wojtak_curves": {
+    "random_in_space": [
+      {
+        "label": "random_in_space",
+        "rmax_mpc_h": 50.0,
+        "mu_percent": 0.7,
+        "sigma_percent": 3.3,
+        "reference": "Wojtak et al. 2014 (MNRAS 438 1805; arXiv:1312.0276) Table 1",
+        "notes": "Observers drawn uniformly in space; Hloc estimated using haloes with log10Mhalo>13"
+      },
+      {
+        "label": "random_in_space",
+        "rmax_mpc_h": 75.0,
+        "mu_percent": 0.3,
+        "sigma_percent": 2.1,
+        "reference": "Wojtak et al. 2014 (MNRAS 438 1805; arXiv:1312.0276) Table 1",
+        "notes": "Same row; rmax=75 Mpc/h"
+      },
+      {
+        "label": "random_in_space",
+        "rmax_mpc_h": 150.0,
+        "mu_percent": 0.0,
+        "sigma_percent": 0.9,
+        "reference": "Wojtak et al. 2014 (MNRAS 438 1805; arXiv:1312.0276) Table 1",
+        "notes": "Same row; rmax=150 Mpc/h"
+      }
+    ],
+    "random_in_haloes": [
+      {
+        "label": "random_in_haloes",
+        "rmax_mpc_h": 50.0,
+        "mu_percent": -1.7,
+        "sigma_percent": 4.0,
+        "reference": "Wojtak et al. 2014 (MNRAS 438 1805; arXiv:1312.0276) Table 1",
+        "notes": "Observers placed in random DM haloes (overdense environments bias low)"
+      },
+      {
+        "label": "random_in_haloes",
+        "rmax_mpc_h": 75.0,
+        "mu_percent": -0.8,
+        "sigma_percent": 2.4,
+        "reference": "Wojtak et al. 2014 (MNRAS 438 1805; arXiv:1312.0276) Table 1",
+        "notes": "Same row; rmax=75 Mpc/h"
+      },
+      {
+        "label": "random_in_haloes",
+        "rmax_mpc_h": 150.0,
+        "mu_percent": -0.2,
+        "sigma_percent": 0.9,
+        "reference": "Wojtak et al. 2014 (MNRAS 438 1805; arXiv:1312.0276) Table 1",
+        "notes": "Same row; rmax=150 Mpc/h"
+      }
+    ],
+    "void_centres": [
+      {
+        "label": "void_centres",
+        "rmax_mpc_h": 50.0,
+        "mu_percent": 2.5,
+        "sigma_percent": 2.5,
+        "reference": "Wojtak et al. 2014 (MNRAS 438 1805; arXiv:1312.0276) Table 1",
+        "notes": "Observers placed at centres of voids (underdense environments bias high)"
+      },
+      {
+        "label": "void_centres",
+        "rmax_mpc_h": 75.0,
+        "mu_percent": 1.0,
+        "sigma_percent": 1.8,
+        "reference": "Wojtak et al. 2014 (MNRAS 438 1805; arXiv:1312.0276) Table 1",
+        "notes": "Same row; rmax=75 Mpc/h"
+      },
+      {
+        "label": "void_centres",
+        "rmax_mpc_h": 150.0,
+        "mu_percent": 0.1,
+        "sigma_percent": 0.9,
+        "reference": "Wojtak et al. 2014 (MNRAS 438 1805; arXiv:1312.0276) Table 1",
+        "notes": "Same row; rmax=150 Mpc/h"
+      }
+    ]
+  },
+  "odderskov_curves": {
+    "A.0": [
+      {
+        "label": "Random in space",
+        "rmax_mpc_h": 67.0,
+        "mu_percent": 0.1,
+        "sigma_percent": 4.6,
+        "reference": "Odderskov et al. 2015 (arXiv:1407.7364) Table 2",
+        "notes": "Full sky; Planck-like parameters; 240 halos per observer; rmin=30 Mpc/h"
+      },
+      {
+        "label": "Random in space",
+        "rmax_mpc_h": 150.0,
+        "mu_percent": 0.0,
+        "sigma_percent": 0.9,
+        "reference": "Odderskov et al. 2015 (arXiv:1407.7364) Table 2",
+        "notes": "Same row; rmax=150 Mpc/h"
+      },
+      {
+        "label": "Random in space",
+        "rmax_mpc_h": 256.0,
+        "mu_percent": 0.0,
+        "sigma_percent": 0.3,
+        "reference": "Odderskov et al. 2015 (arXiv:1407.7364) Table 2",
+        "notes": "Same row; rmax=256 Mpc/h"
+      }
+    ],
+    "A.1": [
+      {
+        "label": "Random in halos",
+        "rmax_mpc_h": 67.0,
+        "mu_percent": 0.1,
+        "sigma_percent": 4.7,
+        "reference": "Odderskov et al. 2015 (arXiv:1407.7364) Table 2",
+        "notes": "Full sky; observers randomly in halos"
+      },
+      {
+        "label": "Random in halos",
+        "rmax_mpc_h": 150.0,
+        "mu_percent": -0.1,
+        "sigma_percent": 0.9,
+        "reference": "Odderskov et al. 2015 (arXiv:1407.7364) Table 2",
+        "notes": "Same row; rmax=150 Mpc/h"
+      },
+      {
+        "label": "Random in halos",
+        "rmax_mpc_h": 256.0,
+        "mu_percent": 0.0,
+        "sigma_percent": 0.3,
+        "reference": "Odderskov et al. 2015 (arXiv:1407.7364) Table 2",
+        "notes": "Same row; rmax=256 Mpc/h"
+      }
+    ],
+    "A.2": [
+      {
+        "label": "Local-Group-like halos",
+        "rmax_mpc_h": 67.0,
+        "mu_percent": -2.0,
+        "sigma_percent": 4.5,
+        "reference": "Odderskov et al. 2015 (arXiv:1407.7364) Table 2",
+        "notes": "Full sky; observers selected as Local-Group-like halos"
+      },
+      {
+        "label": "Local-Group-like halos",
+        "rmax_mpc_h": 150.0,
+        "mu_percent": -0.3,
+        "sigma_percent": 0.9,
+        "reference": "Odderskov et al. 2015 (arXiv:1407.7364) Table 2",
+        "notes": "Same row; rmax=150 Mpc/h"
+      },
+      {
+        "label": "Local-Group-like halos",
+        "rmax_mpc_h": 256.0,
+        "mu_percent": 0.0,
+        "sigma_percent": 0.2,
+        "reference": "Odderskov et al. 2015 (arXiv:1407.7364) Table 2",
+        "notes": "Same row; rmax=256 Mpc/h"
+      }
+    ]
+  },
+  "outputs": {
+    "json": "D:\\Relational-Ontology\\math\\hubble_env_scan\\observer_env_bias_scale_results_v0.json",
+    "plot": "D:\\Relational-Ontology\\math\\hubble_env_scan\\observer_env_bias_scale_plot_v0.png"
+  },
+  "note": "sigma_percent is the reported scatter of H_loc across observers, not the error on the mean."
+}

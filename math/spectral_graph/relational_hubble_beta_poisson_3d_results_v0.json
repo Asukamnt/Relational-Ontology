@@ -1,0 +1,79 @@
+{
+  "metadata": {
+    "timestamp": "2026-02-04T05:43:07.534601",
+    "script": "run_relational_hubble_beta_poisson_3d_v0.py"
+  },
+  "config": {
+    "n": 18,
+    "w_edge": 1.0,
+    "ref_index": 0,
+    "profile": "tophat",
+    "sigma": 3.0,
+    "R_void": 8.0,
+    "delta0_list": [
+      0.1,
+      0.2,
+      0.3,
+      0.4,
+      0.5
+    ],
+    "rmin": 3.0,
+    "rmax": 7.0,
+    "v_scale": 1.0,
+    "seed": 0
+  },
+  "model": {
+    "definitions": {
+      "delta_rel": "node scalar field on 3D torus (profile=tophat or gaussian), constructed to have mean~0",
+      "potential_phi": "Poisson solve on graph Laplacian: L phi = -delta_rel (gauge fixed by phi(ref)=0); graph L≈-∇^2 so ∇^2 phi = delta_rel",
+      "velocity": "entropic flow proxy v = -v_scale * grad(phi) (central difference, periodic)",
+      "hubble_bias_estimator": "deltaH/H = sum w r v_r / sum w r^2 with uniform shell weight"
+    },
+    "notes": [
+      "This toy focuses on sign + near-linearity, not cosmological normalization.",
+      "To map to beta=f/3 in standard linear theory, attach a dynamics-derived scaling between v and delta."
+    ]
+  },
+  "series": [
+    {
+      "delta0": 0.1,
+      "delta_eff": -0.09999999999999999,
+      "deltaH_over_H": 0.03328584545443464,
+      "beta_eff": 0.33285845454434637
+    },
+    {
+      "delta0": 0.2,
+      "delta_eff": -0.19999999999999998,
+      "deltaH_over_H": 0.06657169090886927,
+      "beta_eff": 0.33285845454434637
+    },
+    {
+      "delta0": 0.3,
+      "delta_eff": -0.3,
+      "deltaH_over_H": 0.09985753636330388,
+      "beta_eff": 0.3328584545443463
+    },
+    {
+      "delta0": 0.4,
+      "delta_eff": -0.39999999999999997,
+      "deltaH_over_H": 0.13314338181773855,
+      "beta_eff": 0.33285845454434637
+    },
+    {
+      "delta0": 0.5,
+      "delta_eff": -0.5,
+      "deltaH_over_H": 0.16642922727217319,
+      "beta_eff": 0.33285845454434637
+    }
+  ],
+  "fit_deltaH_over_H_vs_delta_eff": {
+    "beta": 0.3328584545443464,
+    "intercept": -4.1015520925482195e-17,
+    "r2": 1.0,
+    "pearson_r": -1.0
+  },
+  "outputs": {
+    "json": "D:\\Relational-Ontology\\math\\spectral_graph\\relational_hubble_beta_poisson_3d_results_v0.json",
+    "plot": "D:\\Relational-Ontology\\math\\spectral_graph\\relational_hubble_beta_poisson_3d_plot_v0.png"
+  }
+}

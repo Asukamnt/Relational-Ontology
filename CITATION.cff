@@ -1,0 +1,29 @@
+cff-version: 1.2.0
+message: "If you use this repository (code, data, or figures), please cite it using the metadata below."
+title: "Hubble tension environment correction (reproducible pipeline)"
+type: software
+license: MIT
+authors:
+  - family-names: Wang
+    given-names: Baiyi
+    name: "Baiyi Wang"
+date-released: "2026-02-03"
+keywords:
+  - cosmology
+  - hubble tension
+  - observer environment
+  - local H0 bias
+  - density contrast
+  - reproducibility
+preferred-citation:
+  type: report
+  title: "Environmental correction to the Hubble tension: a reproducible, falsifiable v0 relational-network model"
+  authors:
+    - family-names: Wang
+      given-names: Baiyi
+      name: "Baiyi Wang"
+  year: 2026
+  month: 1
+  day: 31
+  version: "v0"
+

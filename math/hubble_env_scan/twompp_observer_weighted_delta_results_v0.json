@@ -1,0 +1,437 @@
+{
+  "metadata": {
+    "timestamp": "2026-02-03T16:13:40.747586",
+    "script": "run_twompp_observer_weighted_delta_v0.py"
+  },
+  "inputs": {
+    "pantheonplus_url": "https://raw.githubusercontent.com/PantheonPlusSH0ES/DataRelease/main/Pantheon%2B_Data/4_DISTANCES_AND_COVAR/Pantheon%2BSH0ES.dat",
+    "pantheonplus_file": "D:\\Relational-Ontology\\math\\hubble_env_scan\\_cache\\Pantheon+SH0ES.dat",
+    "results_v1": {
+      "results_v1_path": "D:\\Relational-Ontology\\math\\hubble_env_scan\\results_v1.json",
+      "env_id_local": "sh0es_local",
+      "H0_global": 67.36,
+      "H0_local": 73.17,
+      "dH_over_H": 0.08625296912114022,
+      "beta_p50": 0.16874349611317885,
+      "beta_p16": 0.1390478076271427,
+      "beta_p84": 0.2013705413024651,
+      "delta_required_p50": -0.5111484063556976,
+      "delta_required_p16": -0.4283296283719348,
+      "delta_required_p84": -0.6203116078782626,
+      "note": "delta_required is the delta (in the same model equation) needed to explain H0_local/H0_global given beta. This is not delta_g*."
+    },
+    "filters": {
+      "z_field": "zCMB",
+      "z_min": 0.015,
+      "z_max": 0.06,
+      "only_sh0es_hf": 1,
+      "exclude_calibrators": 1,
+      "dedup_cid": 1
+    },
+    "counts": {
+      "pantheonplus_rows_raw": 1701,
+      "pantheonplus_rows_used": 166
+    },
+    "weight_config": {
+      "r_shell_min": 40.0,
+      "r_shell_max": 200.0,
+      "b_cut_deg": 15.0
+    },
+    "twompp": {
+      "grid_N": 257,
+      "grid_spacing_mpc_h": 1.5625,
+      "grid_extent_mpc_h": 200.0,
+      "base_smoothing_mpc_h": 4.0
+    }
+  },
+  "weights": {
+    "radial": {
+      "r_edges_mpc_h": [
+        40.0,
+        45.0,
+        50.0,
+        55.0,
+        60.0,
+        65.0,
+        70.0,
+        75.0,
+        80.0,
+        85.0,
+        90.0,
+        95.0,
+        100.0,
+        105.0,
+        110.0,
+        115.0,
+        120.0,
+        125.0,
+        130.0,
+        135.0,
+        140.0,
+        145.0,
+        150.0,
+        155.0,
+        160.0,
+        165.0,
+        170.0,
+        175.0,
+        180.0,
+        185.0,
+        190.0,
+        195.0,
+        200.0
+      ],
+      "r_mids_mpc_h": [
+        42.5,
+        47.5,
+        52.5,
+        57.5,
+        62.5,
+        67.5,
+        72.5,
+        77.5,
+        82.5,
+        87.5,
+        92.5,
+        97.5,
+        102.5,
+        107.5,
+        112.5,
+        117.5,
+        122.5,
+        127.5,
+        132.5,
+        137.5,
+        142.5,
+        147.5,
+        152.5,
+        157.5,
+        162.5,
+        167.5,
+        172.5,
+        177.5,
+        182.5,
+        187.5,
+        192.5,
+        197.5
+      ],
+      "counts": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        6,
+        22,
+        11,
+        10,
+        13,
+        10,
+        15,
+        11,
+        15,
+        6,
+        2,
+        5,
+        5,
+        5,
+        3,
+        7,
+        6,
+        2,
+        4,
+        2,
+        3,
+        3,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "w_r_mids": [
+        0.0,
+        0.0003057188973723348,
+        0.01109570389717636,
+        0.155938750389648,
+        0.9591791721247382,
+        2.8513993431897386,
+        4.368969080972362,
+        3.9326984561747924,
+        3.022191287751726,
+        2.6424910999313997,
+        2.4446592348635887,
+        2.3180251917920556,
+        2.1001695665336513,
+        1.710101656166436,
+        1.0778155597020098,
+        0.6001160949503561,
+        0.5030906288556238,
+        0.5073448760764518,
+        0.4596574893182377,
+        0.4319810384068736,
+        0.45935353094299736,
+        0.40447917892784546,
+        0.28446875927297777,
+        0.2187871592109205,
+        0.18467915592736833,
+        0.16393651167931533,
+        0.12300736740008728,
+        0.05295289494797179,
+        0.010282171748203676,
+        0.0007999142479970203,
+        2.3405700082381017e-05,
+        0.0
+      ],
+      "rmin_mpc_h": 40.0,
+      "rmax_mpc_h": 200.0,
+      "bin_width_mpc_h": 5.0,
+      "smooth_sigma_bins": 1.0,
+      "definition": "w_r(mid) ~ N(mid)/mid^2, smoothed, then normalized to mean=1; used as w(r) in delta_eff integral"
+    },
+    "latitude_axisymmetric": {
+      "absb_edges_deg": [
+        0.0,
+        5.0,
+        10.0,
+        15.0,
+        20.0,
+        25.0,
+        30.0,
+        35.0,
+        40.0,
+        45.0,
+        50.0,
+        55.0,
+        60.0,
+        65.0,
+        70.0,
+        75.0,
+        80.0,
+        85.0,
+        90.0
+      ],
+      "absb_mids_deg": [
+        2.5,
+        7.5,
+        12.5,
+        17.5,
+        22.5,
+        27.5,
+        32.5,
+        37.5,
+        42.5,
+        47.5,
+        52.5,
+        57.5,
+        62.5,
+        67.5,
+        72.5,
+        77.5,
+        82.5,
+        87.5
+      ],
+      "counts": [
+        0,
+        1,
+        9,
+        9,
+        13,
+        10,
+        11,
+        9,
+        15,
+        14,
+        12,
+        12,
+        11,
+        19,
+        9,
+        7,
+        5,
+        0
+      ],
+      "expected_counts_isotropic": [
+        14.467853296111256,
+        14.35774419659918,
+        14.138363994308008,
+        13.811382305042564,
+        13.379287656895102,
+        12.845368551043883,
+        12.213688434273653,
+        11.489054773691873,
+        10.67698246900138,
+        9.783651880783452,
+        8.815861794222288,
+        7.780977676244168,
+        6.686875619867083,
+        5.541882402376891,
+        4.35471211352456,
+        3.1343998360411915,
+        1.8902328832032291,
+        0.6316801167702395
+      ],
+      "w_lat_mids": [
+        0.05444085113192166,
+        0.22222985140440593,
+        0.4863102180166022,
+        0.7015862366534062,
+        0.8236869408107523,
+        0.8534869498530427,
+        0.8782725157378296,
+        1.0040125180838186,
+        1.23357828649468,
+        1.3826908711284973,
+        1.451547953721812,
+        1.6268309393362816,
+        2.0685173704557966,
+        2.496893863877788,
+        2.4421439179045055,
+        2.2319386813661204,
+        1.729047087379976,
+        0.7731061240757492
+      ],
+      "n_bins": 18,
+      "smooth_sigma_bins": 1.0,
+      "clip_min": 0.0,
+      "clip_max": 5.0,
+      "definition": "axisymmetric latitude weight w_lat(|b|) from sample / isotropic, smoothed, clipped, isotropic-mean normalized"
+    }
+  },
+  "results": {
+    "sigma_paths": {
+      "4.0": "D:\\Relational-Ontology\\math\\hubble_env_scan\\_cache\\twompp_density.npy",
+      "20.0": "D:\\Relational-Ontology\\math\\hubble_env_scan\\_cache\\twompp_density_smoothed_sigma_20p000_mpch.npy",
+      "50.0": "D:\\Relational-Ontology\\math\\hubble_env_scan\\_cache\\twompp_density_smoothed_sigma_50p000_mpch.npy",
+      "100.0": "D:\\Relational-Ontology\\math\\hubble_env_scan\\_cache\\twompp_density_smoothed_sigma_100p000_mpch.npy"
+    },
+    "models": {
+      "uniform_shell": {
+        "denom_sumw": 8712460.0,
+        "by_sigma": {
+          "4.0": {
+            "delta_g_star_eff_mean": 0.005768976332764929,
+            "delta_g_star_eff_std": 0.6983592349173067,
+            "predicted_dH_over_H_using_delta_g_star": -0.0009734772353849396,
+            "predicted_H0_using_delta_g_star": 67.29442657342446
+          },
+          "20.0": {
+            "delta_g_star_eff_mean": 0.00989651342688699,
+            "delta_g_star_eff_std": 0.1472533407314111,
+            "predicted_dH_over_H_using_delta_g_star": -0.0016699722749839272,
+            "predicted_H0_using_delta_g_star": 67.24751066755708
+          },
+          "50.0": {
+            "delta_g_star_eff_mean": 0.008298240394598174,
+            "delta_g_star_eff_std": 0.033300380567087735,
+            "predicted_dH_over_H_using_delta_g_star": -0.0014002740957721007,
+            "predicted_H0_using_delta_g_star": 67.26567753690878
+          },
+          "100.0": {
+            "delta_g_star_eff_mean": 0.005291254785419898,
+            "delta_g_star_eff_std": 0.005896251659587454,
+            "predicted_dH_over_H_using_delta_g_star": -0.0008928648313173415,
+            "predicted_H0_using_delta_g_star": 67.29985662496246
+          }
+        }
+      },
+      "sh0es_radial_fullsky": {
+        "denom_sumw": 4758343.103094014,
+        "by_sigma": {
+          "4.0": {
+            "delta_g_star_eff_mean": 0.02929666309899685,
+            "delta_g_star_eff_std": 0.811676661231628,
+            "predicted_dH_over_H_using_delta_g_star": -0.004943621355774685,
+            "predicted_H0_using_delta_g_star": 67.02699766547502
+          },
+          "20.0": {
+            "delta_g_star_eff_mean": 0.028129957210554328,
+            "delta_g_star_eff_std": 0.17470649228386123,
+            "predicted_dH_over_H_using_delta_g_star": -0.004746747325223062,
+            "predicted_H0_using_delta_g_star": 67.04025910017297
+          },
+          "50.0": {
+            "delta_g_star_eff_mean": 0.021060719831772406,
+            "delta_g_star_eff_std": 0.038748354456751545,
+            "predicted_dH_over_H_using_delta_g_star": -0.0035538594950734357,
+            "predicted_H0_using_delta_g_star": 67.12061202441186
+          },
+          "100.0": {
+            "delta_g_star_eff_mean": 0.00862467993430155,
+            "delta_g_star_eff_std": 0.005709523211191826,
+            "predicted_dH_over_H_using_delta_g_star": -0.0014553586449712254,
+            "predicted_H0_using_delta_g_star": 67.26196704167474
+          }
+        }
+      },
+      "sh0es_radial_galcut": {
+        "denom_sumw": 3527047.8566361396,
+        "by_sigma": {
+          "4.0": {
+            "delta_g_star_eff_mean": 0.050339178677655014,
+            "delta_g_star_eff_std": 0.8616669784270862,
+            "predicted_dH_over_H_using_delta_g_star": -0.008494409001533495,
+            "predicted_H0_using_delta_g_star": 66.7878166096567
+          },
+          "20.0": {
+            "delta_g_star_eff_mean": 0.042961986577457444,
+            "delta_g_star_eff_std": 0.18180352451218268,
+            "predicted_dH_over_H_using_delta_g_star": -0.007249555815047632,
+            "predicted_H0_using_delta_g_star": 66.87166992029839
+          },
+          "50.0": {
+            "delta_g_star_eff_mean": 0.02226359030811296,
+            "delta_g_star_eff_std": 0.03927809066190146,
+            "predicted_dH_over_H_using_delta_g_star": -0.0037568360646224653,
+            "predicted_H0_using_delta_g_star": 67.10693952268703
+          },
+          "100.0": {
+            "delta_g_star_eff_mean": 0.008372200305166258,
+            "delta_g_star_eff_std": 0.00548455325546513,
+            "predicted_dH_over_H_using_delta_g_star": -0.0014127543496535774,
+            "predicted_H0_using_delta_g_star": 67.26483686700733
+          }
+        }
+      },
+      "sh0es_radial_latweight": {
+        "denom_sumw": 4743194.32043164,
+        "by_sigma": {
+          "4.0": {
+            "delta_g_star_eff_mean": 0.04773566643849604,
+            "delta_g_star_eff_std": 0.8512502516550919,
+            "predicted_dH_over_H_using_delta_g_star": -0.008055083244124359,
+            "predicted_H0_using_delta_g_star": 66.81740959267577
+          },
+          "20.0": {
+            "delta_g_star_eff_mean": 0.03748100676712738,
+            "delta_g_star_eff_std": 0.18174919033040401,
+            "predicted_dH_over_H_using_delta_g_star": -0.006324676119726789,
+            "predicted_H0_using_delta_g_star": 66.9339698165752
+          },
+          "50.0": {
+            "delta_g_star_eff_mean": 0.0212833292676448,
+            "delta_g_star_eff_std": 0.039011908305579227,
+            "predicted_dH_over_H_using_delta_g_star": -0.003591423389550326,
+            "predicted_H0_using_delta_g_star": 67.11808172047989
+          },
+          "100.0": {
+            "delta_g_star_eff_mean": 0.00821521683553715,
+            "delta_g_star_eff_std": 0.005287163253650714,
+            "predicted_dH_over_H_using_delta_g_star": -0.0013862644101563847,
+            "predicted_H0_using_delta_g_star": 67.26662122933186
+          }
+        }
+      }
+    }
+  },
+  "outputs": {
+    "json": "D:\\Relational-Ontology\\math\\hubble_env_scan\\twompp_observer_weighted_delta_results_v0.json",
+    "plot": "D:\\Relational-Ontology\\math\\hubble_env_scan\\twompp_observer_weighted_delta_plot_v0.png"
+  },
+  "notes": [
+    "delta_eff is computed as a 3D weighted volume average of 2M++ delta_g* around the origin.",
+    "w_r(r) is derived from Pantheon+ SH0ES-HF sample radial counts (as a window proxy).",
+    "w_lat(|b|) is an axisymmetric latitude-only proxy for sky coverage; real footprint is more complex.",
+    "Predicted dH/H uses the model beta but treats delta_g* as delta (diagnostic only)."
+  ]
+}

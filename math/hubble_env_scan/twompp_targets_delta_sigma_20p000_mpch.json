@@ -1,0 +1,98 @@
+[
+  {
+    "target_id": "local_group",
+    "target_name": "Local Group (origin)",
+    "coord_system": "galactic",
+    "ra_deg": null,
+    "dec_deg": null,
+    "l_deg": 0.0,
+    "b_deg": 0.0,
+    "r_mpc_h": 0.0,
+    "reference": "Carrick et al. 2015 (2M++ density field; https://cosmicflows.iap.fr/download/)",
+    "notes": "Origin of the 2M++ cube (cell [128,128,128])",
+    "galactic_l_deg": 0.0,
+    "galactic_b_deg": 0.0,
+    "x_mpc_h": 0.0,
+    "y_mpc_h": 0.0,
+    "z_mpc_h": 0.0,
+    "grid_index": {
+      "i": 128,
+      "j": 128,
+      "k": 128
+    },
+    "delta_g_star": 0.1197564886869981,
+    "smoothing_gaussian_mpc_h": 20.0
+  },
+  {
+    "target_id": "coma",
+    "target_name": "Coma cluster (Abell 1656)",
+    "coord_system": "equatorial",
+    "ra_deg": 194.953,
+    "dec_deg": 27.9806,
+    "l_deg": 58.079419987779836,
+    "b_deg": 87.95763705026457,
+    "r_mpc_h": 73.3,
+    "reference": "Carrick et al. 2015 (2M++ density field; https://cosmicflows.iap.fr/download/)",
+    "notes": "Approx center RA=12h59m48.7s Dec=+27°58'50\\; r≈cz/100 with z_CMB≈0.02445\"",
+    "galactic_l_deg": 58.079419987779836,
+    "galactic_b_deg": 87.95763705026457,
+    "x_mpc_h": 1.381233552796213,
+    "y_mpc_h": 2.2172688763216923,
+    "z_mpc_h": 73.25343618290356,
+    "grid_index": {
+      "i": 129,
+      "j": 129,
+      "k": 175
+    },
+    "delta_g_star": 0.4322764151332613,
+    "smoothing_gaussian_mpc_h": 20.0
+  },
+  {
+    "target_id": "great_attractor",
+    "target_name": "Great Attractor (Norma/GA region)",
+    "coord_system": "galactic",
+    "ra_deg": null,
+    "dec_deg": null,
+    "l_deg": 325.0,
+    "b_deg": -7.0,
+    "r_mpc_h": 48.4,
+    "reference": "Carrick et al. 2015 (2M++ density field; https://cosmicflows.iap.fr/download/)",
+    "notes": "Direction l≈325 b≈-7; r≈4844/100 Mpc/h (order-of-mag)",
+    "galactic_l_deg": 325.0,
+    "galactic_b_deg": -7.0,
+    "x_mpc_h": 39.35143652373896,
+    "y_mpc_h": -27.554172493302943,
+    "z_mpc_h": -5.898476220809138,
+    "grid_index": {
+      "i": 153,
+      "j": 110,
+      "k": 124
+    },
+    "delta_g_star": 0.5241388523085098,
+    "smoothing_gaussian_mpc_h": 20.0
+  },
+  {
+    "target_id": "shapley",
+    "target_name": "Shapley supercluster (concentration)",
+    "coord_system": "equatorial",
+    "ra_deg": 201.25,
+    "dec_deg": -30.0,
+    "l_deg": 311.531118363705,
+    "b_deg": 32.31073097097159,
+    "r_mpc_h": 138.0,
+    "reference": "Carrick et al. 2015 (2M++ density field; https://cosmicflows.iap.fr/download/)",
+    "notes": "Approx center RA≈13h25m Dec≈-30°; z≈0.046 -> cz≈13800 km/s -> r≈138 Mpc/h",
+    "galactic_l_deg": 311.531118363705,
+    "galactic_b_deg": 32.31073097097159,
+    "x_mpc_h": 77.33034477729882,
+    "y_mpc_h": -87.31045667756234,
+    "z_mpc_h": 73.76246966703056,
+    "grid_index": {
+      "i": 177,
+      "j": 72,
+      "k": 175
+    },
+    "delta_g_star": 1.1196292302083295,
+    "smoothing_gaussian_mpc_h": 20.0
+  }
+]

@@ -1,0 +1,67 @@
+{
+  "metadata": {
+    "timestamp": "2026-02-02T20:28:11.103128",
+    "script": "run_cf2_cone_proxy_bins_v0.py"
+  },
+  "config": {
+    "cone": {
+      "name": "shapley_table2flow",
+      "l_deg": 311.531118363705,
+      "b_deg": 32.31073097097159,
+      "radius_deg": 60.0
+    },
+    "smooth_mpc_h": 20.0,
+    "table": "table2",
+    "velocity_mode": "hubble_flow",
+    "r_from": "dist",
+    "h_ref": 0.6736,
+    "dist_min_mpc": 60.0,
+    "dist_max_mpc": 250.0,
+    "vmin_kms": 6000.0,
+    "vmax_kms": 20000.0,
+    "err_max": 0.25,
+    "peculiar_vel_err_kms": 250.0,
+    "n_bins": 5,
+    "min_per_bin": 20
+  },
+  "counts": {
+    "n_cf2_rows": 5224,
+    "n_selected": 39,
+    "n_used_in_bins": 39,
+    "n_bins_output": 1
+  },
+  "bin_edges": [
+    0.10343936494488115,
+    0.22301745795698774,
+    0.3414718679941665,
+    0.37980202211716796,
+    0.47701802530326737,
+    0.945831679961187
+  ],
+  "bins": [
+    {
+      "bin_index": 1,
+      "lo": 0.10343936494488115,
+      "hi": 0.945831679961187,
+      "n": 39,
+      "delta_mean": 0.4165788426630528,
+      "H0_mean": 74.05980759124739,
+      "H0_se": 1.2358121068357586,
+      "note": "fallback_single_aggregate (not enough samples for stable quantile bins)"
+    }
+  ],
+  "fit_bins": {
+    "error": "not_applicable",
+    "n_points": 1
+  },
+  "outputs": {
+    "bins_csv": "D:\\Relational-Ontology\\math\\hubble_env_scan\\hubble_env_cf2_cone_shapley_table2flow_sigma20_proxy_bins_v0.csv",
+    "merged_csv": "D:\\Relational-Ontology\\math\\hubble_env_scan\\hubble_env_data_v1_cf2_cone_shapley_table2flow_sigma20_proxy_v0.csv",
+    "json": "D:\\Relational-Ontology\\math\\hubble_env_scan\\cf2_cone_shapley_table2flow_sigma20_proxy_bins_results_v0.json",
+    "plot": "D:\\Relational-Ontology\\math\\hubble_env_scan\\cf2_cone_shapley_table2flow_sigma20_proxy_bins_plot_v0.png"
+  },
+  "notes": [
+    "This proxy track is exploratory and not equivalent to observer-environment bias.",
+    "If beta_like is negative here, it usually indicates residual flow/systematic effects dominating H0=V/Dist."
+  ]
+}
