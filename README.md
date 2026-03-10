@@ -48,13 +48,6 @@ Expected outputs:
 - arXiv LaTeX draft: `papers/hubble_tension_environment_arxiv_v0.tex`
 - Repro steps: `REPRODUCE_HUBBLE_TENSION.md`
 
-## arXiv submission / endorsement (no offline contacts)
-
-See `ENDORSEMENT.md` for a low-social-cost workflow:
-
-- GitHub Release → Zenodo DOI (frozen version)
-- request arXiv endorsement by email (templates included)
-
 ## License / citation
 
 - License: MIT (`LICENSE`)
